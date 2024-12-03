@@ -3,11 +3,11 @@ import { space } from "postcss/lib/list";
 const Blog = ({ blog }) => {
     return (
         <div className="my-6" >
-            <div>
-                <img className="rounded-xl" src={blog.
+            <div className="w-full">
+                <img className="rounded-xl w-full" src={blog.
                     cover_image} alt="" />
             </div>
-            <div className="flex gap-4 justify-between">
+            <div className="flex gap-4 justify-between items-center ">
                 {/* Author */}
                 <div className="flex gap-4 my-2">
                     <img className="w-12 h-12 rounded-full" src={blog.author_image} alt="" />
@@ -17,9 +17,7 @@ const Blog = ({ blog }) => {
                     </div>
                 </div>
                 {/*  BookMark*/}
-                <div className="my-2">
-                    <p>{blog.reading_time} Min Read</p>
-                </div>
+                <p>{blog.reading_time} Min Read</p>
             </div>
             <h3 className="text-3xl font-semibold">{blog.title}</h3>
 
