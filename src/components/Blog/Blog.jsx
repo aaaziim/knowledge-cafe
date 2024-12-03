@@ -1,11 +1,34 @@
+import { space } from "postcss/lib/list";
 
 const Blog = ({ blog }) => {
-    console.log(blog)
     return (
-        <div>
-            <p>{blog.title}</p>
-            <img src={blog.
-cover_image} alt="" />
+        <div className="my-6" >
+            <div>
+                <img className="rounded-xl" src={blog.
+                    cover_image} alt="" />
+            </div>
+            <div className="flex gap-4 justify-between">
+                {/* Author */}
+                <div className="flex gap-4 my-2">
+                    <img className="w-12 h-12 rounded-full" src={blog.author_image} alt="" />
+                    <div>
+                        <p>{blog.author_name}</p>
+                        <p>{blog.date}</p>
+                    </div>
+                </div>
+                {/*  BookMark*/}
+                <div className="my-2">
+                    <p>{blog.reading_time} Min Read</p>
+                </div>
+            </div>
+            <h3 className="text-3xl font-semibold">{blog.title}</h3>
+
+            {blog.hashtags.map((hashtag, index) => (
+                <span className="mr-2" key={index}>{hashtag}</span>
+            ))}
+
+            <p className="underline my-2 text-sky-500">Mark As read</p>
+
         </div>
     );
 };
