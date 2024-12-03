@@ -1,6 +1,6 @@
 import { space } from "postcss/lib/list";
-
-const Blog = ({ blog }) => {
+import { FaRegBookmark } from "react-icons/fa";
+const Blog = ({ blog, handleAddToBookmark }) => {
     return (
         <div className="my-6" >
             <div className="w-full">
@@ -17,7 +17,7 @@ const Blog = ({ blog }) => {
                     </div>
                 </div>
                 {/*  BookMark*/}
-                <p>{blog.reading_time} Min Read</p>
+                <p >{blog.reading_time} Min Read <button onClick={() => handleAddToBookmark(blog)}><FaRegBookmark /></button></p>
             </div>
             <h3 className="text-3xl font-semibold">{blog.title}</h3>
 
