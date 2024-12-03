@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "title": "Mastering JavaScript in 2024",
+        "cover_image": "https://img.freepik.com/free-photo/upset-gloomy-uneasy-cute-pouting-redhead-girl-frowning-dont-want-speak-you-hiding-face_1258-127738.jpg",
+        "date": "2024-12-04",
+        "reading_time": 8,
+        "author_name": "John Doe",
+        "author_image": "https://img.freepik.com/free-photo/adorable-sweet-girl-stand-son-taking-notes_144627-76934.jpg",
+        "hashtags": [
+            "#JavaScript",
+            "#Programming",
+            "#WebDevelopment"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Top 10 Python Libraries for Data Science",
+        "cover_image": "https://img.freepik.com/free-photo/education-modern-lifestyle-college-concept-attractive-carefree-redhead-female-student-sitting-wi_1258-144469.jpg",
+        "date": "2024-12-03",
+        "reading_time": 6,
+        "author_name": "Jane Smith",
+        "author_image": "https://img.freepik.com/free-photo/adorable-sweet-girl-stand-son-taking-notes_144627-76934.jpg",
+        "hashtags": [
+            "#Python",
+            "#DataScience",
+            "#MachineLearning"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "The Future of AI: Trends for 2025",
+        "cover_image": "https://img.freepik.com/premium-photo/low-section-woman-standing-against-yellow-background_1048944-21490878.jpg",
+        "date": "2024-12-02",
+        "reading_time": 10,
+        "author_name": "Alice Brown",
+        "author_image": "https://img.freepik.com/free-photo/adorable-sweet-girl-stand-son-taking-notes_144627-76934.jpg",
+        "hashtags": [
+            "#AI",
+            "#Technology",
+            "#FutureTrends"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Web3 Explained: A Beginner's Guide",
+        "cover_image": "https://img.freepik.com/free-photo/concerned-tensed-attractive-redhead-female-student-cant-write-down-everything-from-blackboard-after_1258-126345.jpg",
+        "date": "2024-12-01",
+        "reading_time": 7,
+        "author_name": "Bob Lee",
+        "author_image": "https://img.freepik.com/free-photo/adorable-sweet-girl-stand-son-taking-notes_144627-76934.jpg",
+        "hashtags": [
+            "#Web3",
+            "#Blockchain",
+            "#Decentralization"
+        ]
+    }
+]
