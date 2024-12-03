@@ -1,11 +1,12 @@
 
 const Header = () => {
     return (
-        <div>
+        <header>
             <h1 className="text-4xl font-bold ">
                 Knowledge Cafe
             </h1>
-        </div>
+            <img src="" alt="" />
+        </header>
     );
 };
 
