@@ -1,6 +1,6 @@
 import { space } from "postcss/lib/list";
 import { FaRegBookmark } from "react-icons/fa";
-const Blog = ({ blog, handleAddToBookmark }) => {
+const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
     return (
         <div className="my-6" >
             <div className="w-full">
@@ -25,7 +25,7 @@ const Blog = ({ blog, handleAddToBookmark }) => {
                 <span className="mr-2" key={index}>{hashtag}</span>
             ))}
 
-            <p className="underline my-2 text-sky-500">Mark As read</p>
+            <p className="underline my-2 text-sky-500" onClick={() => handleMarkAsRead(blog.reading_time)}>Mark As read</p>
 
         </div>
     );
