@@ -18,7 +18,7 @@ const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
                     </div>
                 </div>
                 {/*  BookMark*/}
-                <p >{blog.reading_time} Min Read <button onClick={() => handleAddToBookmark(blog)}><FaRegBookmark /></button></p>
+                <p className="flex items-center gap-3">{blog.reading_time} Min Read <button onClick={() => handleAddToBookmark(blog)}><FaRegBookmark /></button></p>
             </div>
             <h3 className="text-3xl font-semibold">{blog.title}</h3>
 
@@ -26,7 +26,10 @@ const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
                 <span className="mr-2" key={index}>{hashtag}</span>
             ))}
 
-            <p className="underline my-2 text-sky-500" onClick={() => handleMarkAsRead(blog.reading_time, blog.id)}>Mark As read</p>
+            <div>
+
+                <button className="underline my-2 text-sky-500 bg-slate-200 p-2 rounded-lg" onClick={() => handleMarkAsRead(blog.reading_time, blog.id)}>Mark As Read</button>
+            </div>
 
         </div>
     );
