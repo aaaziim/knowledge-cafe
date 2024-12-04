@@ -21,10 +21,12 @@ const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
                 <p className="flex items-center gap-3">{blog.reading_time} Min Read <button onClick={() => handleAddToBookmark(blog)}><FaRegBookmark /></button></p>
             </div>
             <h3 className="text-3xl font-semibold">{blog.title}</h3>
+            <p className="my-2">
+                {blog.hashtags.map((hashtag, index) => (
+                    <span className="mr-2 " key={index}>{hashtag}</span>
+                ))}
+            </p>
 
-            {blog.hashtags.map((hashtag, index) => (
-                <span className="mr-2" key={index}>{hashtag}</span>
-            ))}
 
             <div>
 
