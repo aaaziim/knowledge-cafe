@@ -6,7 +6,7 @@ const Blogs = () => {
     const [blogs, setBlogs] = useState([])
 
     const [bookmarks, setBookmarks] = useState([])
-    const [readtime, setReadtime] = useState(0)
+    const [readTime, setReadTime] = useState(0)
 
 
     useEffect(() => {
@@ -19,9 +19,11 @@ const Blogs = () => {
         const newBookmarks = [...bookmarks, blog];
         setBookmarks(newBookmarks)
     }
-    const handleMarkAsRead = (blogTime) => {
-        const newReadTime = readtime + blogTime;
-        setReadtime(newReadTime)
+    const handleMarkAsRead = (blogTime, id) => {
+        const newReadTime = readTime + blogTime;
+        setReadTime(newReadTime)
+        const remainingBookmarks = bookmarks.filter(bookmark => bookmark.id !== id)
+        setBookmarks(remainingBookmarks)
     }
     return (
         <div className="md:flex md:justify-between   gap-4">
@@ -36,8 +38,7 @@ const Blogs = () => {
             <div className="md:w-1/3 my-6">
                 <Bookmarks
                     bookmarks={bookmarks}
-                    readtime={readtime}
-
+                    readTime={readTime}
                 >
                 </Bookmarks>
             </div>
@@ -47,5 +48,6 @@ const Blogs = () => {
         </div>
     );
 };
+
 
 export default Blogs;

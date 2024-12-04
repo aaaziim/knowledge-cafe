@@ -1,5 +1,6 @@
 import { space } from "postcss/lib/list";
 import { FaRegBookmark } from "react-icons/fa";
+import PropTypes from "prop-types"
 const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
     return (
         <div className="my-6" >
@@ -25,10 +26,15 @@ const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
                 <span className="mr-2" key={index}>{hashtag}</span>
             ))}
 
-            <p className="underline my-2 text-sky-500" onClick={() => handleMarkAsRead(blog.reading_time)}>Mark As read</p>
+            <p className="underline my-2 text-sky-500" onClick={() => handleMarkAsRead(blog.reading_time, blog.id)}>Mark As read</p>
 
         </div>
     );
 };
+Blog.propTypes = {
+    blog: PropTypes.object.isRequired,
+    handleAddToBookmark: PropTypes.func.isRequired,
+    handleMarkAsRead: PropTypes.func.isRequired
+}
 
 export default Blog;
